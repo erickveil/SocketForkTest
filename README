@@ -1,0 +1,17 @@
+Fork Socket Test
+====
+A phpunit based integration test for testing socket connecting methods.
+
+The public end of my units lately have often been in a place where the unit connects to some external component: sockets, database, a GUI, etc.
+
+The really testable components have been private members. So this leaves me usually writing unit tests.
+
+My socket tests, until now, have required me to manually set up an ncat somewhere to provide the mock for the far end of the public component that I am testind.
+
+This script is a basic layout that illustrates how I am going to set up these integration tests automatically from now on.
+
+For example, I can program a listener mock to be automatically launched to receive the asserted client's output side effect.
+
+This code also illustrates the simplest functioning echo listener and clients I could mock up for this purpose.
+It also demonstrates simple process forking in PHP.
+
